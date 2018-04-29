@@ -28,12 +28,13 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 #container{
-	height: 400em;
+	height: 100em;
 	width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 	background-image: url(https://www.transparenttextures.com/patterns/billie-holiday.png);
 
 		#triangle-topleft{
+			overflow-x: hidden;
 			width: 300px;
 			height: 430px;
 			border-top: 55em solid #ac795e;
@@ -41,27 +42,9 @@ body {
 		}
 }
 .stuff{
+	overflow-x: hidden;
 	position: absolute;
 	top: 2em;
-}
-.controls{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border: 5px solid green;
-	position: relative;
-	top: 3.5em;
-
-	.main-controls{
-		display:flex;
-		flex-direction: row;
-		justify-content: space-around;
-		border: 2px solid orange;
-	}
-}
-.jump{
-	display: flex;
-	justify-content: space-between;
 }
 
 
@@ -85,7 +68,8 @@ h2{
 }
 
 .slideshow {
-	border: 10px solid red;
+	border: 2px double #968847;
+	background: rgba(89, 70, 37, .7);
 	z-index: 1;
 	display: flex;
 	justify-content: center;
@@ -97,14 +81,62 @@ h2{
 	.slide {
 		border: 5px solid blue;
 		position: absolute;
-		width: 60%;
-		height: auto;
+		top: 7.4em;
+		width: 300px;
+		height: 450px;
 		opacity: 0;
 		z-index: 2;
 		transition: 0.5s;
 		&.active {
 			opacity: 1;
 			z-index: 3;
+		}
+	}
+}
+.controls{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	top: 4em;
+	margin-bottom: .4em;
+
+	.main-controls{
+		width: 100%;
+		display:flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 1.4em;
+	}
+
+	.jump{
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	}
+}
+.blurb{
+	position: relative;
+	margin: 0 auto;
+	top: 4.5em;
+	display: flex;
+	flex-direction: column;
+	border: 5px double pink;
+	width: 95%;
+	padding: 1.7em 2.7em;
+
+	font-size: 1.02em;
+	line-height: 150%;
+	letter-spacing: -.01em;
+
+	p{
+		padding-bottom: .8em;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		&:hover{
+			color: white;
 		}
 	}
 }
