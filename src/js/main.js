@@ -32,7 +32,7 @@ let slideshow = function(time, selector) {
 
 	}
 
-	let previous = function(){
+	let prev = function(){
 		let $active = $slideshowContainer.querySelector('.active');
 		if ($active) $active.classList.remove('active');
 
