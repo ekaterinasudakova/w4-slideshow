@@ -44,8 +44,25 @@ body {
 	position: absolute;
 	top: 2em;
 }
+.controls{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 5px solid green;
+	position: relative;
+	top: 3.5em;
 
-
+	.main-controls{
+		display:flex;
+		flex-direction: row;
+		justify-content: space-around;
+		border: 2px solid orange;
+	}
+}
+.jump{
+	display: flex;
+	justify-content: space-between;
+}
 
 
 

@@ -96,6 +96,27 @@ body {
 	top: 2em;
 }
 
+.controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 5px solid green;
+	position: relative;
+	top: 3.5em;
+}
+
+.controls .main-controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 2px solid orange;
+}
+
+.jump {
+	display: flex;
+	justify-content: space-between;
+}
+
 /* 2. Content ================================= */
 h1 {
 	position: relative;
