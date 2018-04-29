@@ -56,12 +56,13 @@ let slideshow = function(time, selector) {
 		$slides[currentSlideNumber].classList.add('active');
 	}
 
-	let jump = function(){
+	let jump = function(currentSlideNumber){
+
 		//whatever slide currently has .active, remove .active from it
 		let $active = $slideshowContainer.querySelector('.active');
 		if ($active) $active.classList.remove('active');
 
-
+		$slides[currentSlideNumber].classList.add('active');
 	}
 
 	let stop = function(){
