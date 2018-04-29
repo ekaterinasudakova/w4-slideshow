@@ -36,15 +36,20 @@ var slideshow = function slideshow(time, selector) {
 
 	var prev = function prev() {
 
+		//whatever slide currently has .active, remove .active from it
 		var $active = $slideshowContainer.querySelector('.active');
 		if ($active) $active.classList.remove('active');
 
+		// if we're on the first slide, go to last slide
 		if (currentSlideNumber === 0) {
 			currentSlideNumber = $slides.length - 1;
-		} else {
-			currentSlideNumber--;
 		}
+		//or change slide counter, down by one
+		else {
+				currentSlideNumber--;
+			}
 
+		//find slide referenced by currentSlideNumber, add .active to it
 		$slides[currentSlideNumber].classList.add('active');
 	};
 
