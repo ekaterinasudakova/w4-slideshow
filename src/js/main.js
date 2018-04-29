@@ -15,7 +15,7 @@ let slideshow = function(time, selector) {
 	//find the element we're going to build the slideshow inside
 	if (!$slideshowContainer) {
 		console.warn("Couldn't create slideshow, element not found: " + selector)
-		return false=
+		return false
 	}
 
 	let next = function(){
@@ -38,19 +38,26 @@ let slideshow = function(time, selector) {
 	}
 
 	let prev = function(){
+
 		let $active = $slideshowContainer.querySelector('.active');
 		if ($active) $active.classList.remove('active');
 
-		currentSlideNumber--;
-
-		if(currentSlideNumber === $slides.length){
-			currentSlideNumber = 0;
+		if(currentSlideNumber === 0){
+			currentSlideNumber = $slides.length - 1;
+		} else{
+			currentSlideNumber--;
 		}
 
 		$slides[currentSlideNumber].classList.add('active');
 	}
 
-	let jump = function(){}
+	let jump = function(){
+		//whatever slide currently has .active, remove .active from it
+		let $active = $slideshowContainer.querySelector('.active');
+		if ($active) $active.classList.remove('active');
+
+
+	}
 
 	let stop = function(){
 		clearInterval(intervalID);
